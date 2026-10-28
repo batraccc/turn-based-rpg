@@ -39,15 +39,15 @@ void Character::displayStats() const
     std::cout << std::endl;
 }
 
-void Character::takeDamage(unsigned damage)
+void Character::takeDamage(unsigned damage, std::string attack_type)
 {
-    if (damage >= hp)
+    if ((damage - defense) >= hp)
     {
         hp = 0;
         is_alive = false;
     }
     else
     {
-        hp -= damage;
+        hp -= (damage - defense);
     }
 }

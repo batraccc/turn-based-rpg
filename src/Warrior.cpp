@@ -2,7 +2,7 @@
 
 Warrior::Warrior(unsigned hp, unsigned attack, unsigned defense, unsigned speed) : Character(hp, attack, defense, speed) {}
 
-void Warrior::Attack(Character &other) const
+void Warrior::Attack(Character &other)
 {
-    other.takeDamage(attack);
+    other.takeDamage(attack, "physical");
 }
